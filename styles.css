@@ -1,0 +1,8 @@
+*, html {
+    box-sizing: border-box;
+}
+
+#inner-sel {
+    height: 25vh;
+    width: 100vw;
+}
