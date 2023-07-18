@@ -2,7 +2,16 @@
     box-sizing: border-box;
 }
 
-#inner-sel {
-    height: 25vh;
-    width: 100vw;
+.carousel-caption {
+    background-color: black;
+    padding: 10px;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 700px;
+}
+
+#carousel {
+    background-color: black;
 }

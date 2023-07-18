@@ -1,38 +1,30 @@
-function addCarouselItem(obj) {
+function addCarouselItem(i, obj) {
+
     const carouselInner = document.getElementById('inner-sel')
 
-    const carouselItem = document.createElement('div')
-    carouselItem.classList.add('carousel-item')
-    carouselItem.classList.add('w-100')
+    // carouselInner.innerHTML = ''
 
-    const carouselImg = document.createElement('img')
-    carouselImg.classList.add("d-block")
-    carouselImg.classList.add("w-100")
-    carouselImg.src = obj.image
-    carouselItem.appendChild(carouselImg)
+    const carouselItemObj = `
+        <div class="carousel-item w-100 ${i == 0 ? 'active' : ''} ">
+            <img src="${obj.img}" class="d-block carousel-image">
+            <div class="carousel-caption d-none d-md-block">
+                <h1>${obj.title}</h1>
+                <p>${obj.description}</p>
+            </div>
+        </div>
+    `
 
-    const carouselCaption = document.createElement('div')
-    carouselCaption.classList.add('carousel-caption')
-    carouselCaption.classList.add('d-none')
-    carouselCaption.classList.add('d-md-block')
-    const carouselTitle = document.createElement('h5')
-    carouselTitle.innerHTML = obj.title
-    carouselCaption.appendChild(carouselTitle)
-    const carouselDescription = document.createElement('p')
-    carouselDescription.innerHTML = obj.description
-    carouselCaption.appendChild(carouselDescription)
-
-    carouselItem.appendChild(carouselCaption)
-
-    carouselInner.appendChild(carouselItem)
+    carouselInner.innerHTML += carouselItemObj
 
 }
 
 export function addCarouselItems() {
+    // const carouselInner = document.getElementById('inner-sel')
+
 
     for (var i = 0; i < carouselItems.length; i++) {
         console.log('loop')
-        addCarouselItem(carouselItems[i])
+        addCarouselItem(i, carouselItems[i])
     }
 }
 
@@ -40,16 +32,16 @@ const carouselItems = [
     {
         "title": "You can find us downtown!",
         "description": "We are located in the best spots when talking about food",
-        "image": '../../assets/restaurant.jpg'
+        "img": '../../assets/restaurant.jpg'
     },
     {
         "title": "Great food you can find it here",
         "description": "Of course we have some of the best chefs in our kitchen",
-        "image": '../../assets/food.jpg'
+        "img": '../../assets/food.jpg'
     },
     {
         "title": "Our drinks will change your concept of being drunk",
         "description": "Imagine a drink you want. We have it. Otherwise we make it",
-        "image": '../../assets/drinks.jpg'
+        "img": '../../assets/drinks.jpg'
     }
 ]
