@@ -1,8 +1,5 @@
 function addCarouselItem(i, obj) {
 
-    const carouselInner = document.getElementById('inner-sel')
-
-    // carouselInner.innerHTML = ''
 
     const carouselItemObj = `
         <div class="carousel-item w-100 ${i == 0 ? 'active' : ''} ">
@@ -14,18 +11,21 @@ function addCarouselItem(i, obj) {
         </div>
     `
 
-    carouselInner.innerHTML += carouselItemObj
+    return carouselItemObj
 
 }
 
 export function addCarouselItems() {
-    // const carouselInner = document.getElementById('inner-sel')
+    const carouselInner = document.getElementById('inner-sel')
+    let items
 
 
     for (var i = 0; i < carouselItems.length; i++) {
         console.log('loop')
-        addCarouselItem(i, carouselItems[i])
+        items += addCarouselItem(i, carouselItems[i])
     }
+
+    carouselInner.innerHTML = items
 }
 
 const carouselItems = [
