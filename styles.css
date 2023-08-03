@@ -3,14 +3,18 @@
 @import url('./styles/carousel.css');
 @import url('./styles/categories-section.css');
 
+@import url('./mesa_virtual/mesa_virtual.css');
+
 :root {
     --pink: rgb(255, 114, 255);
     --blue: rgb(141, 202, 231);
     --dark-blue: rgb(58, 167, 218);
+    --darker-blue: rgb(24, 133, 184);
 }
 
 *, html {
     box-sizing: border-box;
+    margin: 0;
 }
 
 .custom-row {
