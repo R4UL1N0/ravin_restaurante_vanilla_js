@@ -1,110 +1,128 @@
 [
     {
         "id": "1",
-        "name": "English Pale Ale",
+        "nome": "English Pale Ale",
         "categoria": "Ale",
-        "descricao": "Bla bla bla"
+        "descricao": "Bla bla bla",
+        "imagem": "assets/english_pale_ale.webp"
     },
     {
         "id": "2",
-        "name": "Belgian Ale",
+        "nome": "Belgian Ale",
         "categoria": "Ale",
-        "descricao": "Bla bla bla"
+        "descricao": "Bla bla bla",
+        "imagem": "assets/cerveja.jpg"
     },
     {
         "id": "3",
-        "name": "Strong Ale",
+        "nome": "Strong Ale",
         "categoria": "Ale",
-        "descricao": "Bla bla bla"
+        "descricao": "Bla bla bla",
+        "imagem": "assets/cerveja.jpg"
     },
     {
         "id": "4",
-        "name": "Porter",
+        "nome": "Porter",
         "categoria": "Ale",
-        "descricao": "Bla bla bla"
+        "descricao": "Bla bla bla",
+        "imagem": "assets/cerveja.jpg"
     },
     {
         "id": "5",
-        "name": "Stout",
+        "nome": "Stout",
         "categoria": "Ale",
-        "descricao": "Bla bla bla"
+        "descricao": "Bla bla bla",
+        "imagem": "assets/cerveja.jpg"
     },
     {
         "id": "6",
-        "name": "Witbier",
+        "nome": "Witbier",
         "categoria": "Ale",
-        "descricao": "Bla bla bla"
+        "descricao": "Bla bla bla",
+        "imagem": "assets/cerveja.jpg"
     },
     {
         "id": "7",
-        "name": "Red Ale",
+        "nome": "Red Ale",
         "categoria": "Ale",
-        "descricao": "Bla bla bla"
+        "descricao": "Bla bla bla",
+        "imagem": "assets/cerveja.jpg"
     },
     {
         "id": "8",
-        "name": "American Pale Ale",
+        "nome": "American Pale Ale",
         "categoria": "Ale",
-        "descricao": "Bla bla bla"
+        "descricao": "Bla bla bla",
+        "imagem": "assets/cerveja.jpg"
     },
     {
         "id": "9",
-        "name": "IPA",
+        "nome": "IPA",
         "categoria": "Ale",
-        "descricao": "Bla bla bla"
+        "descricao": "Bla bla bla",
+        "imagem": "assets/cerveja.jpg"
     },
     {
         "id": "10",
-        "name": "Bohemian Pilsner",
+        "nome": "Bohemian Pilsner",
         "categoria": "Lager",
-        "descricao": "Bla bla bla"
+        "descricao": "Bla bla bla",
+        "imagem": "assets/cerveja.jpg"
     },
     {
         "id": "11",
-        "name": "Vienna Lager",
+        "nome": "Vienna Lager",
         "categoria": "Lager",
-        "descricao": "Bla bla bla"
+        "descricao": "Bla bla bla",
+        "imagem": "assets/cerveja.jpg"
     },
     {
         "id": "12",
-        "name": "American Lager",
+        "nome": "American Lager",
         "categoria": "Lager",
-        "descricao": "Bla bla bla"
+        "descricao": "Bla bla bla",
+        "imagem": "assets/cerveja.jpg"
     },
     {
         "id": "13",
-        "name": "German Lager",
+        "nome": "German Lager",
         "categoria": "Lager",
-        "descricao": "Bla bla bla"
+        "descricao": "Bla bla bla",
+        "imagem": "assets/cerveja.jpg"
     },
     {
         "id": "14",
-        "name": "Strong Pale Lager",
+        "nome": "Strong Pale Lager",
         "categoria": "Lager",
-        "descricao": "Bla bla bla"
+        "descricao": "Bla bla bla",
+        "imagem": "assets/cerveja.jpg"
     },
     {
         "id": "15",
-        "name": "Dunkell",
+        "nome": "Dunkell",
         "categoria": "Lager",
-        "descricao": "Bla bla bla"
+        "descricao": "Bla bla bla",
+        "imagem": "assets/cerveja.jpg"
     },
     {
         "id": "16",
-        "name": "Bock",
+        "nome": "Bock",
         "categoria": "Lager",
-        "descricao": "Bla bla bla"
+        "descricao": "Bla bla bla",
+        "imagem": "assets/cerveja.jpg"
     },
     {
         "id": "17",
-        "name": "Kellerbier",
+        "nome": "Kellerbier",
         "categoria": "Lager",
-        "descricao": "Bla bla bla"
+        "descricao": "Bla bla bla",
+        "imagem": "assets/cerveja.jpg"
     },
     {
         "id": "18",
-        "name": "German Pilsner",
+        "nome": "German Pilsner",
         "categoria": "Lager",
-        "descricao": "Bla bla bla"
+        "descricao": "Bla bla bla",
+        "imagem": "assets/cerveja.jpg"
     }
 ]

@@ -16,12 +16,12 @@
             <!-- <h3>🍺</h3> -->
         </div>
         <div id="nav-links">
-            <a href="/cardapio.html">Peça uma mesa!</a>
+            <a href="/cardapio.html">Restaurante Virtual</a>
         </div>
         
     </div>
     <section id="carousel-section">
-        <div id="carousel" class="carousel slide w-100" data-ride="carousel" data-interval="5000">
+        <div id="carousel" class="carousel slide w-100" data-ride="carousel" data-interval="4000">
             <div id="inner-sel" class="carousel-inner w-100"></div>
         </div>
     </section>
@@ -47,34 +47,74 @@
                             cardapioTabs[0].classList.remove("active-tab")
                         }
                         console.log(cardapioTabs)
+
+                        changeContent(index)
+                    }
+
+                    function changeContent(index) {
+                        const lagersContent = document.getElementById("lagers-content")
+                        const alesContent = document.getElementById("ales-content")
+                        if (index === 0) {
+                            lagersContent.style.display = "none"
+                            alesContent.style.display = "grid"
+                        } else if (index === 1) {
+                            lagersContent.style.display = "grid"
+                            alesContent.style.display = "none"
+                        }
                     }
                 </script>
             </div>
-            <div id="cardapio-content">
+            <div class="cardapio-content" id="ales-content"></div>
+            <div class="cardapio-content" id="lagers-content"></div>
                 <script>
+                    
+                    
                     function addProducts() {
-                        const cardapioContent = document.getElementById("cardapio-content")
+                        let beers;
+                        fetch('./produtos.json')
+                            .then((data) => {
+                                return data.json()
+                            })
+                            .then((json) => {
+                                createComponents(json)
+                            })
+
+
+                        const lagersContent = document.getElementById("lagers-content")
+                        const alesContent = document.getElementById("ales-content")
+
                         
 
-                        const component = `
-                            <div class="beer-container">
-                                <div class="beer-image">oi</div>
-                                <div class="beer-description">oi</div>
-                            </div>
-                        `
-                        for (var i = 0; i < 9; i++) {
-                            cardapioContent.innerHTML += component
+                        function createComponents(items) {
+                                
+                            for (item of items) {
+                                const component = `
+                                <div class="beer-container">
+                                    <div class="beer-image"><img src=${item.imagem}></div>
+                                    <div class="beer-description"><p>${item.nome}</p></div>
+                                </div>
+                            `
+
+
+                                if (item.categoria === 'Ale') {
+                                    alesContent.innerHTML += component
+                                } else if (item.categoria === 'Lager'){
+                                    lagersContent.innerHTML += component
+                                }
+                                console.log(item)
+                                
+                            }
                         }
                     }
 
                     addProducts()
                 </script>
-            </div>
+            
         </div>
     </section>
 
     <footer>
-        <div class="footer-content"></div>
+        <div class="footer-content"><span>Made in Brazil</span></div>
     </footer>
 
 

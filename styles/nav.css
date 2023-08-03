@@ -1,0 +1,43 @@
+/* :root {
+    --pink: rgb(255, 114, 255);
+} */
+
+.nav-content {
+    
+    display: flex;
+    flex-direction: row;
+    /* padding: 0 20px; */
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--pink);
+}
+
+
+
+.nav-title-div {
+    padding: 10px 20px;
+    background-color: var(--dark-blue);
+    /* padding: 0 20px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-title-div #nav-title {
+    color: white;
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.nav-content p {
+    text-align: center;
+}
+
+.nav-content a {
+    text-align: center;
+    color: white;
+}
+
+#nav-links {
+    padding: 0 20px;
+}

@@ -1,3 +1,14 @@
+@import url('./styles/nav.css');
+@import url('./styles/beer-options.css');
+@import url('./styles/carousel.css');
+@import url('./styles/categories-section.css');
+
+:root {
+    --pink: rgb(255, 114, 255);
+    --blue: rgb(141, 202, 231);
+    --dark-blue: rgb(58, 167, 218);
+}
+
 *, html {
     box-sizing: border-box;
 }
@@ -12,131 +23,29 @@
     flex-direction: column;
 }
 
-.carousel-caption {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-}
-
-.carousel-image {
-    width: 100%;
-    height: 700px;
-}
-
-#carousel {
-    background-color: black;
-}
 
 section {
     padding-top: 10px;
 }
 
-#categorias {
-    height: 300px;
-    background-color: rgb(226, 151, 12);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+footer {
+    height: 100px;
+    background-color: var(--dark-blue);
+    margin-top: 10px;
 }
 
-.categoria-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.categoria-image {
-    height: 80px;
-    width: 80px;
-    margin-bottom: 20px;
-}
-
-.nav-content {
-    display: flex;
-    flex-direction: row;
-    /* padding: 0 20px; */
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgb(226, 151, 12);
-}
-
-
-
-.nav-title-div {
-    background-color: rgb(182, 125, 20);
-    padding: 0 20px;
-}
-
-#nav-title {
-    color: white;
-}
-
-.nav-content p {
-    text-align: center;
-}
-
-.nav-content a {
-    text-align: center;
-}
-
-#nav-links {
-    padding: 0 20px;
-}
-
-#cardapio {
-    display: flex;
-    flex-direction: column;
-}
-
-#cardapio-tabs-div {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-.cardapio-tab {
-    /* height: 100px; */
-    margin: 10px;
-    background-color: rgb(226, 151, 12);
+.footer-content {
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.active-tab {
-    background-color: rgb(240, 189, 93) !important;
+.footer-content span {
+    color: white;
 }
 
-.cardapio-tab h1 {
-    text-align: center;
-}
-
-#cardapio-content {
-    padding: 30px;
-    height: 400px;
-    display: grid;
-    background-color: rgb(226, 151, 12);
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
-.beer-container {
-    height: 80px;
-    margin: 10px;
-    display: flex;
-    flex-direction: row;
-}
-
-.beer-image {
-    background-color: brown;
-    width: 80px;
-}
-
-.beer-description {
-    background-color: blueviolet;
-    flex-grow: 1;
-}
-
-.footer-content {
-
-}
 
 
 
