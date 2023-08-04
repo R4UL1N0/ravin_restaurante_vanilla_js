@@ -10,13 +10,30 @@
     <title>Restaurante Ravin</title>
 </head>
 <body>
+    <div id="fade-background"></div>
     <div class="nav-content">
         <div class="custom-row nav-title-div">
             <h3 id="nav-title">-_RAVIN_-</h3>
             <!-- <h3>🍺</h3> -->
         </div>
         <div id="nav-links">
-            <a href="/mesa_virtual.html">Restaurante Virtual</a>
+            <a id="mesa-virtual-link" href="/mesa_virtual.html">Restaurante Virtual</a>
+
+            <script>
+                const mesaVirtualLink = document.getElementById('mesa-virtual-link')
+
+                mesaVirtualLink.addEventListener('click', (e) => {
+                    e.preventDefault()
+                    const fadeBackground = document.getElementById('fade-background')
+                    fadeBackground.style.display = "block"
+                    fadeBackground.style.animation = "fadeInBackground 350ms"
+
+                    setTimeout(function() {
+                        window.location.href = mesaVirtualLink.href;
+                    }, 300);
+                })
+
+            </script>
         </div>
         
     </div>

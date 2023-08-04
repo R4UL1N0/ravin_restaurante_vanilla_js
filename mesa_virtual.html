@@ -20,12 +20,26 @@
     </div> -->
 
     <!-- MESA VIRTUAL -->
+    <div id="fade-background"></div>
+
+    <script>
+        console.log('loggg')
+
+        const fadeBackground = document.getElementById('fade-background')
+        fadeBackground.style.display = "block"
+        fadeBackground.style.animation = "fadeOutBackground 700ms ease"
+
+        setTimeout(() => {
+            fadeBackground.style.display = "none"
+            console.log('Is it working?')
+        }, 750)
+        
+
+    </script>
     <div id="mesa-virtual">
-        <div id="loading-screen">
-            <div class="ball">
-                <h1>Loading</h1>
-            </div>
-        </div>
+        <!-- <div id="loading-screen">
+            
+        </div> -->
         <div id="mesa-menu">
             <div class="mesa-menu-item" id="mesa-info">
                 <h2>Mesa</h2> <h1 id="mesa-value">?</h1>
@@ -58,17 +72,21 @@
                 </script>
             </div>
             <div class="mesa-menu-item" id="produtos">
-                <div></div>
-                <div class="mesa-menu-item" id="produto-selecionado"></div>
+                <div class="m-10" id="mesa-selected-products-content">oi</div>
+                <div class="m-10" id="product-qtd-confirmar">oi</div>
             </div>
             
         </div>
         <div id="mesa-tela">
             <!-- <div class="nav-resturante-virtual"></div> -->
             <div id="game-screen">
-                <div id="screen"></div>
+                <div id="proper-screen">
+                    <div class="ball">
+                        <h1>Loading</h1>
+                    </div>
+                </div>
             </div>
-            <div id="big-screen-options">oi</div>
+            <div id="big-screen-options"></div>
         </div>
     </div>
 

@@ -50,6 +50,44 @@ footer {
     color: white;
 }
 
+#fade-background {
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+    display: none;
+    opacity: 0;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+}
+
+.m-10 {
+    margin: 10px;
+}
+
+.h-full {
+    height: 100%;
+}
+
+.w-full {
+    width: 100%;
+}
+
+@keyframes fadeInBackground {
+    0% {
+        opacity: 0;
+    } 100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOutBackground {
+    0% {
+        opacity: 1;
+    } 100% {
+        opacity: 0;
+    }
+}
 
 
 

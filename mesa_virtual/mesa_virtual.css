@@ -53,7 +53,7 @@
 }
 
 #mesa-menu {
-    background-color: black;
+    background-color: var(--dark-blue);
     padding: 20px;
     display: grid;
     grid-template-columns: 0.5fr 0.5fr 2fr;
@@ -79,12 +79,15 @@
 
 }
 
-#mesa-tela #game-screen #screen { 
+#mesa-tela #game-screen #proper-screen { 
     height: 80%;
     width: 80%;
     background-color: white;
     border-radius: 20px;
     border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
 }
 
@@ -139,9 +142,16 @@
 }
 
 #produtos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
-#produto-selecionado {
+#mesa-selected-products-content {
+    background-color: black;
+}
+
+#product-qtd-confirmar {
+    background-color: black;
 }
 
 @media only screen and (min-width: 1600px) {
@@ -166,5 +176,10 @@
         grid-template-rows: 0.5fr 0.5fr 2fr;
         grid-template-columns: 1fr;
         margin: 10px;
+    }
+
+    #produtos {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
     }
 }
