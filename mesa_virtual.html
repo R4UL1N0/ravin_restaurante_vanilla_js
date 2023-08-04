@@ -9,37 +9,74 @@
 </head>
 <body id="body-mesa">
     <!-- NAV BAR -->
-    <div class="nav-content">
+    <!-- <div class="nav-content">
         <div class="custom-row nav-title-div">
             <h3 id="nav-title">-_RAVIN_-</h3>
-            <!-- <h3>🍺</h3> -->
+            
         </div>
         <div id="nav-links">
             <a href="/index.html">Menu Inicial</a>
         </div>
-    </div>
+    </div> -->
 
     <!-- MESA VIRTUAL -->
     <div id="mesa-virtual">
+        <div id="loading-screen">
+            <div class="ball">
+                <h1>Loading</h1>
+            </div>
+        </div>
         <div id="mesa-menu">
             <div class="mesa-menu-item" id="mesa-info">
-                <h2>Mesa ?</h2>
+                <h2>Mesa</h2> <h1 id="mesa-value">?</h1>
+
+                <script>
+                    const mesaValueComponent = document.getElementById('mesa-value')
+
+                    mesaValueComponent.innerHTML = Math.floor(Math.random() * 10) + 1
+                </script>
             </div>
             <div class="mesa-menu-item" id="produtos-categoria">
-                <div class="cat-item item-selected"><p>Ales</p></div>
-                <div class="cat-item"><p>Lagers</p></div>
+                <div class="cat-item item-selected" onclick=onClickItem(0)><p>Ales</p></div>
+                <div class="cat-item" onclick=onClickItem(1)><p>Lagers</p></div>
+
+                <script>
+                    let selected = 0
+                    const items = document.getElementsByClassName('cat-item')
+
+                    function onClickItem(index) {
+                        if (index == selected) {
+                            return;
+                        }
+
+                        console.log(items[index])
+                        items[index].classList.add("item-selected")
+                        items[selected].classList.remove("item-selected")
+
+                        selected = index
+                    }
+                </script>
             </div>
-            <div class="mesa-menu-item" id="produtos"></div>
-            <div class="mesa-menu-item" id="produto-selecionado"></div>
+            <div class="mesa-menu-item" id="produtos">
+                <div></div>
+                <div class="mesa-menu-item" id="produto-selecionado"></div>
+            </div>
+            
         </div>
-        <div id="mesa-tela"></div>
+        <div id="mesa-tela">
+            <!-- <div class="nav-resturante-virtual"></div> -->
+            <div id="game-screen">
+                <div id="screen"></div>
+            </div>
+            <div id="big-screen-options">oi</div>
+        </div>
     </div>
 
 
     <!-- FOOTER -->
-    <footer>
+    <!-- <footer>
         <div class="footer-content"><span>Made in Brazil</span></div>
-    </footer>
+    </footer> -->
 
 </body>
 </html>

@@ -1,42 +1,116 @@
 #body-mesa {
-    /* background-color: aquamarine; */
     height: 100vh;
     display: flex;
     flex-direction: column;
     
 }
 
-#mesa-virtual {
-    display: grid;
-    grid-template-rows: 1fr 3fr;
-    grid-template-columns: 1fr;
-    flex-grow: 1;
-}
-
-#mesa-menu {
-    background-color: yellow;
-    padding: 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-}
-
-#mesa-tela {
-    background-color: blue;
-    padding: 20px;
-}
-
-.mesa-menu-item {
-    background-color: var(--blue);
-    margin: 5px;
-    padding: 5px;
+#loading-screen {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(250, 38, 222, 0.3);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.ball {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(0deg);
+    animation: rotate-ball 4000ms infinite;
+}
+
+@keyframes rotate-ball {
+    0% {
+        transform: rotate(0deg);
+    } 25% {
+        transform: rotate(110deg);
+    } 50% {
+        transform: rotate(-20deg);
+    } 75% {
+        transform: rotate(40deg);
+    } 90% {
+        /* transform: rotate(-40deg); */
+    } 100% {
+        transform: rotate(0deg);
+    }
+}
+
+#mesa-virtual {
+    display: grid;
+    grid-template-rows: 0.5fr 3fr;
+    grid-template-columns: 1fr;
+    /* grid-auto-flow: column-reverse; */
+    flex-grow: 1;
+}
+
+#mesa-menu {
+    background-color: black;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 2fr;
+    grid-template-rows: 1fr;
+}
+
+#mesa-tela {
+    padding: 10px;
+    background-color: white;
+    /* padding: 20px; */
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+}
+
+#mesa-tela #game-screen {
+    background-color: bisque;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+    border: 2px solid black;
+    border-radius: 10px;
+
+}
+
+#mesa-tela #game-screen #screen { 
+    height: 80%;
+    width: 80%;
+    background-color: white;
+    border-radius: 20px;
+    border: 2px solid black;
+    
+}
+
+#mesa-tela #big-screen-options {
+    width: 100%;
+    background-color: bisque;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.mesa-menu-item {
+    background-color: white;
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
 
 #mesa-info {
+    flex-direction: column;
+}
+
+#mesa-info * {
+    margin: 10px;
 }
 
 #produtos-categoria {
@@ -70,15 +144,27 @@
 #produto-selecionado {
 }
 
+@media only screen and (min-width: 1600px) {
+    /* #mesa-virtual {
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 10fr;
+    } */
+}
+
 @media only screen and (min-width: 1000px) {
     #mesa-virtual {
         grid-template-rows: 1fr;
         grid-template-columns: 1fr 3fr;
     }
 
+    #mesa-info {
+        flex-direction: row;
+    }
+
     #mesa-menu {
         display: grid;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 0.5fr 0.5fr 2fr;
         grid-template-columns: 1fr;
+        margin: 10px;
     }
 }
